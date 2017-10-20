@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu id="TOP_MENU" name="TOP" code="" idx="">
+	<command id ="BS_FIREFOX" name="Open firefox" code="OF" clasz="com.weston.cmd.menu.commands.CmdCommand" method="exec" idx="">
+		<parameter name="C1P1" value='"D:/Program Files (x86)/Mozilla Firefox/firefox.exe"' type="java.lang.String" format="" />
+	</command>
+	<menu id="MENU_WORK" name = "WORK_STRUFF" code="w" idx ="">
+		<command id ="Command2" name="Open pms in firefox" code="PMS" clasz="com.weston.cmd.menu.commands.CmdCommand" method="exec" idx="">
+			<parameter name="C1P1" value='"D:/Program Files (x86)/Mozilla Firefox/firefox.exe" -new-tab http://128.160.171.112:81/PMS/www/sys/index.html;' type="java.lang.String" />
+		</command>
+		<command id ="Command2" name="Open Remote Desk in firefox" code="RD" clasz="com.weston.cmd.menu.commands.CmdCommand" method="exec" idx="">
+			<parameter name="C1P1" value='"D:/Program Files (x86)/Mozilla Firefox/firefox.exe" -new-window http://128.160.214.12/Citrix/XDWeb/auth/login.aspx' type="java.lang.String" format="" />
+		</command>
+		<command id ="Command2" name="Open RTX" code="RTX" clasz="com.weston.cmd.menu.commands.CmdCommand" method="exec" idx="">
+			<parameter name="C1P1" value='"C:/Program Files (x86)/Tencent/RTXC/RTX.exe";' type="java.lang.String" />
+		</command>
+	</menu>
+</menu>
