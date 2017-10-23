@@ -1,9 +1,4 @@
-import java.beans.IntrospectionException;
-import java.beans.PropertyDescriptor;
 import java.io.IOException;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,14 +6,11 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
-import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
 
 import com.weston.cmd.menu.Command;
 import com.weston.cmd.menu.IAction;
 import com.weston.cmd.menu.Menu;
-import com.weston.cmd.menu.Parameter;
 import com.weston.tools.util.MySaxHandler;
 
 public class TestMenu {
@@ -47,7 +39,7 @@ public class TestMenu {
 		System.out.println(base);
 		base.printMenu();
 		Scanner sc = new Scanner(System.in);
-		String currentMenuId = base.getId();
+//		String currentMenuId = base.getId();
 		Menu currentMenu = base;
 		while (sc.hasNext()) {
 			String command = sc.nextLine();
@@ -56,7 +48,7 @@ public class TestMenu {
 			} else if (command.equalsIgnoreCase("back")) {
 				if (null != currentMenu && null != currentMenu.getParent()) {
 					Menu next = (Menu) currentMenu.getParent();
-					currentMenuId=next.getId();
+//					currentMenuId=next.getId();
 					currentMenu = next;
 					currentMenu.printMenu();
 				}
